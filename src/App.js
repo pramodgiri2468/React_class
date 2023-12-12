@@ -1,6 +1,8 @@
 import logo from './logo.svg';
 import './App.css';
 import { useState } from 'react';
+import { Button } from './components/Button';
+
 
 function App() {
   const [count, setCount] = useState(0)
@@ -14,9 +16,10 @@ function App() {
   }
   return (
     <div>
-      <button onClick={sub}>-</button>
+      
+      <Button onClick={sub}>-</Button>
       <span>{count}</span>
-      <button onClick={add}>+</button>
+      <Button onClick={add}>+</Button>
       {count !== 0 ? <div> {count} is {count % 2 === 0 ? 'Even' : 'Odd'} </div>:null}
       
     </div>
